@@ -49,6 +49,21 @@ function getRandomQuote() {
   return quote;
 }
 
+//Changes background colors
+function colorChange () {
+  //Collects random number
+  let randomNumber = Math.floor(Math.random() * 4);
+  if (randomNumber === 1) {
+    document.body.style.backgroundColor = "#5B2C6F";
+  } else if (randomNumber === 2) {
+    document.body.style.backgroundColor = "#515A5A";
+  } else if (randomNumber === 3) {
+    document.body.style.backgroundColor = "#0E6655";
+  } else {
+    document.body.style.backgroundColor = "#1A5276";
+  }
+}
+
 //Function that changes quotes and sources
 function printQuote (randomQuote) {
   myQuote.innerHTML = randomQuote.quote;
@@ -67,6 +82,9 @@ myButton.addEventListener('click', () => {
 
   //Stores quotes object inside of randomQuote variable
   const randomQuote = getRandomQuote();
+
+  //Calls function to change background colors
+  colorChange();
 
   //Calls printQuote function with the returned object from getRandomQuote
   printQuote(randomQuote);
