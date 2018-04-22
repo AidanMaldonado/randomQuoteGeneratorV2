@@ -9,27 +9,27 @@ const quotes = [
     source: "George Orwell",
     citation: "1984",
     year: "1949",
-    tags: "politics"
+    tags: "Politics"
   },
   {
     quote: "Only I can change my life. No one can do it for me.",
     source: "Carol Burnett",
-    tags: "motivation"
+    tags: "Personal"
   },
   {
     quote: "Life is 10% what happens to you and 90% how you react to it.",
     source: "Charles R. Swindoll",
-    tags: "motivation"
+    tags: "Motivational"
   },
   {
     quote: "Always do your best. What you plant now, you will harvest later.",
     source: "Og Mandino",
-    tags: "motivation"
+    tags: "Motivational"
   },
   {
     quote: "It always seems impossible until it's done.",
     source: "Nelson Mandela",
-    tags: "motivation"
+    tags: "Life Tips"
   }
 ]
 
@@ -38,6 +38,7 @@ let myQuote = document.getElementById("quote");
 let mySource = document.getElementById("source");
 let myCitation = document.getElementById("citation");
 let myYear = document.getElementById("year");
+let myTag = document.getElementById("tag");
 const myButton = document.getElementById("loadQuote");
 
 //Picks random quote from quotes array and returns object
@@ -58,6 +59,7 @@ function printQuote (randomQuote) {
   } else {
     mySource.innerHTML = randomQuote.source;
   }
+  myTag.innerHTML = randomQuote.tags;
 }
 
 //Changes quotes on click, runs functions
